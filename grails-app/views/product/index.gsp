@@ -121,23 +121,43 @@
 					</tr>
 				</thead>-->
 				<tbody>
+                                    <tr>
+                                        
 				<g:each in="${productInstanceList}" status="i" var="productInstance">
-					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+  
+					<g:if test="${(i%3==0 && i!=0 && i!=9)}">
+                                            <p>Current Multiple i = ${i}</p>
+                                    
+                                             <td class="container"><div class="row"><div class="col-md-12">
+                                                    <div class="thumbnail">
+                                                       <img src="${fieldValue(bean: productInstance, field: "imageURL")}"width="120" height="140"/>
+                                                        <div class="caption">
+						<g:link action="show" id="${productInstance.id}">${fieldValue(bean: productInstance, field: "name")}</g:link>
+					<h4 class="pull-right">S$ ${fieldValue(bean: productInstance, field: "price")}</h4>
+                                        <p><g:formatDate date="${productInstance.expiryDate}" /></p>
+                            <p>${fieldValue(bean: productInstance, field: "packageDetails")}</p>
+                                 </div></div></div></div></td></tr>
+                                            <tr>
+                                               
+                                          </g:if>
+                                    
+                                  <g:else>
+                                       <td class="container"><div class="row"><div class="col-md-12">
+                                                    <div class="thumbnail">
+                                                       <img src="${fieldValue(bean: productInstance, field: "imageURL")}"width="120" height="140"/>
+                                                        <div class="caption">
+						<g:link action="show" id="${productInstance.id}">${fieldValue(bean: productInstance, field: "name")}</g:link>
+					<h4 class="pull-right">S$ ${fieldValue(bean: productInstance, field: "price")}</h4>
+                                        <p><g:formatDate date="${productInstance.expiryDate}" /></p>
+                            <p>${fieldValue(bean: productInstance, field: "packageDetails")}</p>
+                                 </div></div></div></div></td>
+                                             <p>Current i = ${i}</p>
+                        </g:else>
+
+                                        
+					</g:each>
 					
-						<td><g:link action="show" id="${productInstance.id}">${fieldValue(bean: productInstance, field: "name")}</g:link></td>
-					
-						<td><g:formatDate date="${productInstance.expiryDate}" /></td>
-					
-						<td>${fieldValue(bean: productInstance, field: "price")}</td>
-					
-						<td>${fieldValue(bean: productInstance, field: "packageDetails")}</td>
-					
-                                                <td><img src="${fieldValue(bean: productInstance, field: "imageURL")}"width="120" height="140"/></td>
-					
-						<td>${fieldValue(bean: productInstance, field: "category")}</td>
-					
-					</tr>
-				</g:each>
+				
 				</tbody>
 			</table>
                       
