@@ -28,15 +28,14 @@
                                <div class="col-md-12">
                         <g:form url="[controller:'Product', action:'customSearch']" method="GET">
                           Search <g:textField id="mytext" class="input-xxlarge" placeholder="Describe the product" name="desc" value="${desc}"/>
-                             <button id="submit-values" class="btn btn-small btn-primary" type="submit">Search </button></g:form></div></div></div>
-                            
-                                
+                             <button class="btn btn-small btn-primary" type="submit">Search </button></g:form></div></div></div>
+                       
                                 <div class="container-fluid">
                                 <div class="row">
                              <div class="col-md-12">
                         <g:form url="[controller:'Product', action:'search']" method="GET">
                         Know the Product? <g:textField id="mytext" class="input-xxlarge" name="name" placeholder="Name of Product" value="${name}"/>
-                             <button id="submit-values" class="btn btn-small btn-primary" type="submit">Search </button></g:form></div></div></div>
+                             <button class="btn btn-small btn-primary" type="submit">Search </button></g:form></div></div></div>
                        
                        <div class="container-fluid">
                            <div class="row">
@@ -125,9 +124,8 @@
                                         
 				<g:each in="${productInstanceList}" status="i" var="productInstance">
   
-					<g:if test="${(i%3==0 && i!=0 && i!=9)}">
-                                            <p>Current Multiple i = ${i}</p>
-                                    
+					<g:if test="${(i%3==0 && i!=0)}">
+                                    </tr><tr>
                                              <td class="container"><div class="row"><div class="col-md-12">
                                                     <div class="thumbnail">
                                                        <img src="${fieldValue(bean: productInstance, field: "imageURL")}"width="120" height="140"/>
@@ -136,8 +134,8 @@
 					<h4 class="pull-right">S$ ${fieldValue(bean: productInstance, field: "price")}</h4>
                                         <p><g:formatDate date="${productInstance.expiryDate}" /></p>
                             <p>${fieldValue(bean: productInstance, field: "packageDetails")}</p>
-                                 </div></div></div></div></td></tr>
-                                            <tr>
+                                 </div></div></div></div></td>
+                                            
                                                
                                           </g:if>
                                     
@@ -151,7 +149,6 @@
                                         <p><g:formatDate date="${productInstance.expiryDate}" /></p>
                             <p>${fieldValue(bean: productInstance, field: "packageDetails")}</p>
                                  </div></div></div></div></td>
-                                             <p>Current i = ${i}</p>
                         </g:else>
 
                                         

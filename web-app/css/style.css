@@ -1,0 +1,104 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 11, 2015, 8:12:34 PM
+    Author     : PayalAmarnani
+*/
+/***** BEGIN Dark Menu Styles *****/
+.clear:after { content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+html[xmlns] .clear { display: block;}
+* html .clear { height: 1%;}
+
+nav.green {border-radius: 3px; display: block!important; font-family:  fantasy; font-size: 13pt;color:#efefef;}
+nav.green ul {margin: 0px; padding: 0px; border-left: 1px solid #efefef;}
+nav.green li h1 {color:#777; alignment-baseline: baseline; font-family: fantasy; font-size:12pt;}
+/* Top level */
+nav.green li {list-style: none; float: left; border-right: 1px solid #efefef; position: relative; color:#efefef;}
+nav.green li.first, nav li.first a {border-top-left-radius: 2px; border-bottom-left-radius: 2px; -moz-border-top-left-radius: 2px; -moz-border-bottom-left-radius: 2px;}
+nav.green li.last, nav li.last a {border-top-right-radius: 2px; border-bottom-right-radius: 2px; -moz-border-top-right-radius: 2px; -moz-border-bottom-right-radius: 2px;}
+nav.green li.drop a {padding-right: 30px;}
+nav.green li a {display: block; padding: 9px 23px 10px; text-decoration: none; background-image: url(../images/img/navigation-sprite.png); background-repeat: repeat-x; font-size: 12px; color: #fff; border-top: 1px solid #efefef; border-left: 1px solid #efefef; text-shadow: 0px -1px 0px #000;}
+nav.green li a {background-position: 0px 0px;}
+nav.green li a:hover, nav li.active a {background-position: 0px -36px;}
+nav.green li a:active {background-position: 0px -72px;}
+nav.green .dropdown {display: block; float: right; width: 7px; height: 5px; background: url(../images/img/drop-down.png) no-repeat; margin: -20px 15px 0px 12px;}
+
+/* Drop down */
+nav.green li ul {opacity: 0; position: absolute; top: 45px; left: -26px; padding: 12px 15px; border-radius: 3px; -moz-border-radius: 3px; background: #efefef; display: none; z-index: 100;}
+nav.green li ul li {border-right: 0px; float: none!important; border-bottom: 1px solid #efefef; width: 125px;}
+nav.green li ul li:last-child { border-bottom: 0px;}
+nav.green li ul li a {background: none!important; border-left: 0px; border-top: 0px; padding: 10px 0px; font-size: 11px}
+nav.green li ul li a:hover {opacity: 0.5;}
+
+nav.green li ul li.arrow {background: url(../images/img/arrowtop.png) top left no-repeat; border-bottom: 0px; height: 10px; margin-top: -22px; margin-bottom: 10px;}
+
+/***** END Dark Menu Styles *****/
+
+.wrapper{
+	/*width:800px;*/
+	margin: 0px auto;
+        background-color:#efefef;
+}
+
+.menusubnav{
+background:#fff;
+margin:0; padding:0;
+width:200px; z-index:10;
+font: 12px "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, Verdana, sans-serif;
+color:#666;
+border: .2em solid #fff;
+margin: 2em 2em 1em;
+padding: 1em;
+float: left;
+	-moz-box-shadow: 0px 0px 1.25em #ccc;
+	-webkit-box-shadow: 0px 0px 1.25em #ccc;
+	box-shadow: 0px 0px 1.25em #ccc;
+	-moz-border-radius: 0.6em;
+	-webkit-border-radius: 0.6em;
+border-radius: 0.6em;
+}
+.menusubnav li{
+margin:0; padding:2pt;
+list-style:none;
+color:#59D4B1;
+font-weight: bolder;
+font-family: fantasy;
+font-size: 12pt;
+text-transform: uppercase;
+}
+
+.menusubnav a{
+margin:0; padding:10px; display:block;
+border-bottom: 1px solid #e0e0e0;
+font: 12px "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, Verdana, sans-serif;
+text-decoration:none; color: #333;
+}
+.ie6 #menusubnav {
+display: inline; /* float double margin fix http://www.positioniseverything.net/explorer/doubled-margin.html */
+}
+
+#page-body {
+margin: 2em 1em 1.25em 18em;
+}
+h2 {
+margin-top: 1em;
+margin-bottom: 0.3em;
+font-size: 1em;
+			}
+
+p {
+line-height: 1.5;
+margin: 0.25em 0;
+}
+
+
+@media screen and (max-width: 480px) {
+	#menusubnav {display: none;}
+
+	#page-body {margin: 0 1em 1em;}
+        
+        #page-body h1 {margin-top: 0;}
+}

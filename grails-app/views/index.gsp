@@ -5,7 +5,7 @@
 		<title>Fresh Cart</title>
 	</head>
 	<body>
-<!--		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+            <!--<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>__
 		<div id="status" role="complementary">
 			<h1>Application Status</h1>
 			<ul>
@@ -42,8 +42,8 @@
 				</ul>
 			</div>
 		</div>-->
-            <!--<div id="page-body" role="main">
-                <!---<div class="row carousel-holder" style="width:100%; margin: 0 auto">
+            <div id="page-body" role="main">
+                <div class="row carousel-holder" style="width:100%; margin: 0 auto">
 
                    <div class="col-md-12">
                         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" width="750px" height="400px">
@@ -54,13 +54,13 @@
                             </ol>
                             <div class="carousel-inner">
                                 <div class="item active">
-                                    <img class="slide-image" src="../Assets/images/photos/banner8.png" alt="">
+                                    <img class="slide-image" src="./images/banner3.png" alt="">
                                 </div>
                                 <div class="item">
-                                    <img class="slide-image" src="../Assets/images/photos/banner6.png" alt="">
+                                    <img class="slide-image" src="./images/banner2.png" alt="">
                                 </div>
 								<div class="item">
-                                    <img class="slide-image" src="../Assets/images/photos/banner7.png" alt="">
+                                    <img class="slide-image" src="./images/banner1.png" alt="">
                                 </div>
                             </div>
                             <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
@@ -72,42 +72,30 @@
                         </div>
                     </div>
 		</div>
-<!--                <center>
-                    <p> This is a simple application to manage Employees!! </p>
-                    <br>
-                    <br>
-                    <div class="homeCell" >
-                        <h3>Categories</h3>
-                        <br>
-                        <span class="buttons" >
-                            <g:link controller="ProductCategory" action="index" >List of Categories</g:link>
-                            </span>
-                        </div>
-                        <br>
-                        <div class="homeCell" >
-                            <h3>Department</h3>
-                            <br>
-                            <span class="buttons" >
-                            <g:link controller="Product" action="index" >Product List</g:link>
-                            </span>
-                            <br>
-                            <br>
-                        </div>
-                        <div class="homeCell" >
-                            <h3>Search in the application</h3>
-                            <br>
-                            <span class="buttons" >
-                            <g:link controller="searchable" action="index" >Search and Item</g:link>
-                            </span>
-                        </div>
-                    </center>-->
-<br/><br/><br/>
-<div class="container">
+                	<div class="col-md-12">
+				<div class="row" style="width:100%; margin: 0 auto">
+								<div class="col-sm-6 col-md-6">
+									
+									
+									<div class="col-md-12" text-align="center">
+										<img src="./images/bottom5.png">
+										</div>
+										
+									</div>
+									
+							
+									<div class="col-sm-6 col-md-6">
+										<img src="./images/bottom4.png">
+                                          
+    <br/><br/><br/>
+                                                                        </div></div></div></div>
+
+<!--<div class="container">
                     <div class="row" style="width:100%; margin: 25 auto">
                       <div class="col-sm-4 col-md-4">
                 
                             <g:img dir="images" file="Shopping-basket-filled-with-fresh-vegetables.jpg" width="180" height="120"/>
-                                <!--<img src="../Assets/images/Shopping-basket-filled-with-fresh-vegetables.jpg">-->
+                                <img src="../Assets/images/Shopping-basket-filled-with-fresh-vegetables.jpg">
                             
                                 <h3>View All Categories</h3>
                                 <span class="buttons" >
@@ -136,7 +124,7 @@
                         
 
                     </div>
-                </div>
+                </div>-->
             <!--</div>-->
 	</body>
 </html>
