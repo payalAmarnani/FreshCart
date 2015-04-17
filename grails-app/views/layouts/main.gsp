@@ -29,12 +29,18 @@
         <div class="navbar">
 	<nav class="navbar navbar-default navbar-fixed-top green" role="navigation">
              
-                      <ul class="clear">
-                          <li id="grailsLogo" role="banner"><a href="/FreshCart/"><asset:image src="freshcart_logo.jpg"/></a></li>
+                      <ul class="clear navbar-right">
+ 
                           <!--<li><g:textField name="siteSearch" value="${siteSearch}" /><g:link controller="Searchable" action="index"><span><g:submitButton name="search" value="search" /></span></g:link>-->
                           <li><g:link controller="StaticPages" action="contactUS"><h1><span class="glyphicon glyphicon-envelope"></span> Contact Us</h1></g:link></li>
                           <li><g:link controller="StaticPages" action="aboutUS"><h1><span class="glyphicon glyphicon-user"></span>About Us</h1></g:link></li>
                           <li><a href="#"><h1><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</h1></a></li>
+                      </ul>
+                      <ul class="clear">
+                      <li id="grailsLogo" role="banner"><a href="/FreshCart/"><asset:image src="freshcart_logo.jpg"/></a></li><br/>
+                      <li style="color:#000"><g:form url='[controller: "searchable", action: "index"]' id="searchableForm" name="searchableForm" method="get">
+        <g:textField name="q" value="${params.q}" size="50"/> <input type="submit" value="Search" />
+    </g:form></li>
                       </ul>
               </nav>
               </div>
