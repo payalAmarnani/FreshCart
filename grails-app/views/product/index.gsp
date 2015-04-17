@@ -142,7 +142,7 @@
                                   <g:else>
                                        <td class="container"><div class="row"><div class="col-md-12">
                                                     <div class="thumbnail">
-                                                       <img src="${fieldValue(bean: productInstance, field: "imageURL")}"width="120" height="140"/>
+                                                       <img src="${fieldValue(bean: productInstance, field: "imageURL")}"width="220" height="240"/>
                                                         <div class="caption">
 						<g:link action="show" id="${productInstance.id}">${fieldValue(bean: productInstance, field: "name")}</g:link>
 					<h4 class="pull-right">S$ ${fieldValue(bean: productInstance, field: "price")}</h4>
