@@ -24,17 +24,21 @@
 			</g:if>
                         
                         <h1>Select a Category</h1>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6">
                      <g:form url="[controller:'ProductCategory', action:'search']" method="GET">
                           <g:textField id="mytext" class="input-xxlarge" name="name" placeholder="Know the Exact Name?" value="${name}"/>
                              <button id="submit-values" class="btn btn-small btn-primary" type="submit">
                                  <i class="icon-ok"></i>Search </button>
-                     </g:form>
-                     
+                     </g:form></div>
+                     <div class="col-lg-6">
                      <g:form url="[controller:'ProductCategory', action:'customSearch']" method="GET">
                           <g:textField id="mytext" class="input-xxlarge" name="desc" placeholder="Something Like...." value="${desc}"/>
                              <button id="submit-values" class="btn btn-small btn-primary" type="submit">
                                  <i class="icon-ok"></i>Search </button>
                      </g:form>
+                     </div></div></div>
                      
 <!--			<table>
 			<thead>
@@ -62,8 +66,32 @@
 				</g:each>
 				</tbody>
 			</table>-->
-                        
-                                <table>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <g:each in="${productCategoryInstanceList}" status="i" var="productCategoryInstance">
+                                        <g:if test="${(i%3==0 && i!=0)}">
+                                    </tr><tr>
+                                      <td class="container"><div class="row"><div class="col-md-12">
+                                                    <div class="thumbnail">
+                                                        <img src="${fieldValue(bean: productCategoryInstance, field: "imageURL")}" width="120" height="100"/>
+                                                        <div class="caption">
+                                 <g:link action="show" id="${productCategoryInstance.id}">${fieldValue(bean: productCategoryInstance, field: "name")}</g:link><br/>
+                                                        ${fieldValue(bean: productCategoryInstance, field: "description")}
+                                                            </div></div></div></div></td>
+                                              </g:if>   
+                                            <g:else>
+                                                            <td class="container"><div class="row"><div class="col-md-12">
+                                                    <div class="thumbnail">
+                                                        <img src="${fieldValue(bean: productCategoryInstance, field: "imageURL")}" width="120" height="140"/>
+                                                        <div class="caption">
+                                 <g:link action="show" id="${productCategoryInstance.id}">${fieldValue(bean: productCategoryInstance, field: "name")}</g:link><br/>
+                                                        ${fieldValue(bean: productCategoryInstance, field: "description")}
+                                                            </div></div></div></div></td>
+                                                     </g:else>       
+                                        </g:each> 
+</tbody></table>
+<!--                                 <table>
                                     <tbody>
                                     <g:each in="${productCategoryInstanceList}" var="productCategoryInstance">
                                         <tr>
@@ -76,7 +104,7 @@
                                     </g:each>
                                     
                                     </tbody>
-                                </table>
+                                </table>-->
                                 
 
 			<div class="pagination">
